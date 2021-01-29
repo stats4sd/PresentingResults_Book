@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Presenting results as tables and graphs 2 factorial expts | Resources on Presenting Results</title>
+  <title>Chapter 4 Presenting results across multiple factors | Resources on Presenting Results</title>
   <meta name="description" content="This is a document compiling various resources on how to present results from different types of data, for different audiences and different purposes" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Presenting results as tables and graphs 2 factorial expts | Resources on Presenting Results" />
+  <meta property="og:title" content="Chapter 4 Presenting results across multiple factors | Resources on Presenting Results" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Presenting results as tables and graphs 2 factorial expts | Resources on Presenting Results" />
+  <meta name="twitter:title" content="Chapter 4 Presenting results across multiple factors | Resources on Presenting Results" />
   
   <meta name="twitter:description" content="This is a document compiling various resources on how to present results from different types of data, for different audiences and different purposes" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="RMS" />
 
 
-<meta name="date" content="2021-01-22" />
+<meta name="date" content="2021-01-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="tablegraph1.html"/>
 <link rel="next" href="precision.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,72 +51,16 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.17/datatables.js"></script>
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 
 
-<style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -138,15 +82,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#contents"><i class="fa fa-check"></i><b>1.1</b> Contents</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>2</b> Presenting results as story telling</a></li>
-<li class="chapter" data-level="3" data-path="tablegraph1.html"><a href="tablegraph1.html"><i class="fa fa-check"></i><b>3</b> Presenting results as tables and graphs 1</a></li>
-<li class="chapter" data-level="4" data-path="factor.html"><a href="factor.html"><i class="fa fa-check"></i><b>4</b> Presenting results as tables and graphs 2 factorial expts</a><ul>
+<li class="chapter" data-level="3" data-path="tablegraph1.html"><a href="tablegraph1.html"><i class="fa fa-check"></i><b>3</b> Presenting results as tables and graphs 1</a><ul>
+<li class="chapter" data-level="3.1" data-path="tablegraph1.html"><a href="tablegraph1.html#video"><i class="fa fa-check"></i><b>3.1</b> Video</a></li>
+<li class="chapter" data-level="3.2" data-path="tablegraph1.html"><a href="tablegraph1.html#the-importance-of-visualising-data"><i class="fa fa-check"></i><b>3.2</b> The importance of visualising data</a></li>
+<li class="chapter" data-level="3.3" data-path="tablegraph1.html"><a href="tablegraph1.html#principles-of-data-visualisation"><i class="fa fa-check"></i><b>3.3</b> Principles of data visualisation</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="tablegraph1.html"><a href="tablegraph1.html#effectiveness"><i class="fa fa-check"></i><b>3.3.1</b> Effectiveness</a></li>
+<li class="chapter" data-level="3.3.2" data-path="tablegraph1.html"><a href="tablegraph1.html#readability"><i class="fa fa-check"></i><b>3.3.2</b> Readability</a></li>
+<li class="chapter" data-level="3.3.3" data-path="tablegraph1.html"><a href="tablegraph1.html#tidiness"><i class="fa fa-check"></i><b>3.3.3</b> Tidiness</a></li>
+<li class="chapter" data-level="3.3.4" data-path="tablegraph1.html"><a href="tablegraph1.html#informative"><i class="fa fa-check"></i><b>3.3.4</b> Informative</a></li>
+<li class="chapter" data-level="3.3.5" data-path="tablegraph1.html"><a href="tablegraph1.html#accessibility"><i class="fa fa-check"></i><b>3.3.5</b> Accessibility</a></li>
+<li class="chapter" data-level="3.3.6" data-path="tablegraph1.html"><a href="tablegraph1.html#consistency"><i class="fa fa-check"></i><b>3.3.6</b> Consistency</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="tablegraph1.html"><a href="tablegraph1.html#other-resources"><i class="fa fa-check"></i><b>3.4</b> Other Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="factor.html"><a href="factor.html"><i class="fa fa-check"></i><b>4</b> Presenting results across multiple factors</a><ul>
 <li class="chapter" data-level="4.1" data-path="factor.html"><a href="factor.html#introduction-1"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
 <li class="chapter" data-level="4.2" data-path="factor.html"><a href="factor.html#embed-video-here"><i class="fa fa-check"></i><b>4.2</b> Embed Video Here</a></li>
 <li class="chapter" data-level="4.3" data-path="factor.html"><a href="factor.html#overall-principles"><i class="fa fa-check"></i><b>4.3</b> Overall principles</a></li>
 <li class="chapter" data-level="4.4" data-path="factor.html"><a href="factor.html#example-data"><i class="fa fa-check"></i><b>4.4</b> Example Data</a></li>
 <li class="chapter" data-level="4.5" data-path="factor.html"><a href="factor.html#key-ideas"><i class="fa fa-check"></i><b>4.5</b> Key ideas</a></li>
-<li class="chapter" data-level="4.6" data-path="factor.html"><a href="factor.html#fun-shiny-test"><i class="fa fa-check"></i><b>4.6</b> Fun shiny test</a></li>
-<li class="chapter" data-level="4.7" data-path="factor.html"><a href="factor.html#in-practice"><i class="fa fa-check"></i><b>4.7</b> In practice</a><ul>
+<li class="chapter" data-level="4.6" data-path="factor.html"><a href="factor.html#shiny"><i class="fa fa-check"></i><b>4.6</b> Shiny</a></li>
+<li class="chapter" data-level="4.7" data-path="factor.html"><a href="factor.html#the-general-process"><i class="fa fa-check"></i><b>4.7</b> The general process</a><ul>
 <li class="chapter" data-level="4.7.1" data-path="factor.html"><a href="factor.html#step-1-set-out-the-objectives-message-or-hypothesis-for-the-story-you-want-to-tell-with-the-graph-you-are-designing"><i class="fa fa-check"></i><b>4.7.1</b> Step 1: Set out the objectives, message or hypothesis for the story you want to tell with the graph you are designing</a></li>
 <li class="chapter" data-level="4.7.2" data-path="factor.html"><a href="factor.html#step-2-remember-experiments-are-set-up-to-make-comparisons"><i class="fa fa-check"></i><b>4.7.2</b> Step 2: Remember experiments are set up to make comparisons</a></li>
 <li class="chapter" data-level="4.7.3" data-path="factor.html"><a href="factor.html#step-3-maintain-the-visual-metaphor"><i class="fa fa-check"></i><b>4.7.3</b> Step 3: Maintain the visual metaphor</a></li>
@@ -154,22 +110,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.7.5" data-path="factor.html"><a href="factor.html#step-5-multiple-factors"><i class="fa fa-check"></i><b>4.7.5</b> Step 5: Multiple factors</a></li>
 <li class="chapter" data-level="4.7.6" data-path="factor.html"><a href="factor.html#step-6-colours-and-symbols"><i class="fa fa-check"></i><b>4.7.6</b> Step 6: Colours and symbols</a></li>
 <li class="chapter" data-level="4.7.7" data-path="factor.html"><a href="factor.html#step-7-facets"><i class="fa fa-check"></i><b>4.7.7</b> Step 7: Facets</a></li>
-<li class="chapter" data-level="4.7.8" data-path="factor.html"><a href="factor.html#step-8-interate"><i class="fa fa-check"></i><b>4.7.8</b> Step 8: Interate</a></li>
-<li class="chapter" data-level="4.7.9" data-path="factor.html"><a href="factor.html#step-9-next-steps"><i class="fa fa-check"></i><b>4.7.9</b> Step 9: Next steps</a></li>
+<li class="chapter" data-level="4.7.8" data-path="factor.html"><a href="factor.html#step-9-next-steps"><i class="fa fa-check"></i><b>4.7.8</b> Step 9: Next steps</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="precision.html"><a href="precision.html"><i class="fa fa-check"></i><b>5</b> Presenting results as tables and graphs 3 Precision</a></li>
 <li class="chapter" data-level="6" data-path="farmers.html"><a href="farmers.html"><i class="fa fa-check"></i><b>6</b> Presenting results as tables and graphs 4 for farmers</a></li>
 <li class="chapter" data-level="7" data-path="papers.html"><a href="papers.html"><i class="fa fa-check"></i><b>7</b> Presenting in papers</a></li>
 <li class="chapter" data-level="8" data-path="posters.html"><a href="posters.html"><i class="fa fa-check"></i><b>8</b> Presenting on posters</a><ul>
-<li class="chapter" data-level="8.1" data-path="posters.html"><a href="posters.html#video"><i class="fa fa-check"></i><b>8.1</b> Video</a></li>
+<li class="chapter" data-level="8.1" data-path="posters.html"><a href="posters.html#video-1"><i class="fa fa-check"></i><b>8.1</b> Video</a></li>
 <li class="chapter" data-level="8.2" data-path="posters.html"><a href="posters.html#the-aim-of-posters"><i class="fa fa-check"></i><b>8.2</b> The aim of posters</a></li>
 <li class="chapter" data-level="8.3" data-path="posters.html"><a href="posters.html#key-principles"><i class="fa fa-check"></i><b>8.3</b> Key principles</a><ul>
 <li class="chapter" data-level="8.3.1" data-path="posters.html"><a href="posters.html#the-importance-of-design-and-layout"><i class="fa fa-check"></i><b>8.3.1</b> The importance of design and layout</a></li>
 <li class="chapter" data-level="8.3.2" data-path="posters.html"><a href="posters.html#keep-it-short-and-simple"><i class="fa fa-check"></i><b>8.3.2</b> Keep it short and simple</a></li>
 <li class="chapter" data-level="8.3.3" data-path="posters.html"><a href="posters.html#make-it-engaging"><i class="fa fa-check"></i><b>8.3.3</b> Make it engaging</a></li>
 <li class="chapter" data-level="8.3.4" data-path="posters.html"><a href="posters.html#some-examples"><i class="fa fa-check"></i><b>8.3.4</b> Some examples</a></li>
-<li class="chapter" data-level="8.3.5" data-path="posters.html"><a href="posters.html#other-resources"><i class="fa fa-check"></i><b>8.3.5</b> Other resources</a></li>
+<li class="chapter" data-level="8.3.5" data-path="posters.html"><a href="posters.html#other-resources-1"><i class="fa fa-check"></i><b>8.3.5</b> Other resources</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="audience.html"><a href="audience.html"><i class="fa fa-check"></i><b>9</b> Adapting to audiences</a></li>
@@ -196,14 +151,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="factor" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Presenting results as tables and graphs 2 factorial expts</h1>
-<p>Narrower topic ()
-Sam Can we make it relevant to observational studies as well as expts?</p>
+<h1><span class="header-section-number">Chapter 4</span> Presenting results across multiple factors</h1>
 <div id="introduction-1" class="section level2">
 <h2><span class="header-section-number">4.1</span> Introduction</h2>
-<p>A common task in presenting results is how to show differences in a numeric outcome variable across multiple different explanatory variables. Often this will result from conducting a factorial treatment experiment, for example a randomised complete block design looking at whether yield varies across 5 different varieties of a crop, with 3 different levels of nitrogen fertiliser used.</p>
-<p>Particularly with factorial experiment - the design has been arrived at with a purpose in mind already. That purpose should be reflected in the way they are analysed and presented.</p>
-<p>When visualising these results we should be thinking of ways to clearly and effectively show the impacts of all of these different factors - not just show produce plots sowing the ‘best’ or the ’worst;</p>
+<p>A common task in presenting results is how to show how an outcome variable differs across multiple explanatory factors. Often this will result from conducting a factorial treatment experiment, for example a randomised complete block design looking at whether yield varies across 5 different varieties of a crop, with 3 different levels of nitrogen fertiliser used. However the same principles are common to any analysis where we are wishing to compare the effects of multiple factors all at once, where they are designed ‘treatments’ or observed responses from a survey.</p>
+<p>Whenever visualising results across multiple factors we should be thinking of ways to clearly and effectively show the impacts of all of these different factors; rather than simply highlighting ‘best’ or the ’worst.</p>
+<p>In some cases, particularly considering a classic factorial experiment, the design of the trial itself provides a framework for how we should be visualising the results. In others there may be multiple options, some of which we can determine to be more effective than others,</p>
 </div>
 <div id="embed-video-here" class="section level2">
 <h2><span class="header-section-number">4.2</span> Embed Video Here</h2>
@@ -213,10 +166,8 @@ Sam Can we make it relevant to observational studies as well as expts?</p>
 </div>
 <div id="overall-principles" class="section level2">
 <h2><span class="header-section-number">4.3</span> Overall principles</h2>
-<ul>
-<li>There is never only one right way to present results. But there are ways that are more or less effective at getting over a message. Trial and error of different plot configurations before committing to one is a really useful process for thinking through and refining the presentation. Don’t expect to immediately land on the ‘best’ answer.</li>
-</ul>
-<p>What is effective depends on:
+<p>A key principle to bear in mind always is that there is never only one correct way to present results. But there definitely lots of incorrect or extremely ineffective ways. Even following a set of principles a certain amount of iteration and trial and error of different plot configurations will help the thought process and ensure that you are choosing a sensible and effective plot to convey your message. Don’t expect to immediately land on the ‘best’ answer.</p>
+<p>What is effective depends on a few criteria:
 * The message or objectives. The same data can be presented in different ways to highlight different trends.
 * The design or structure of the data. Consider how many different variables you have, and how many response levels are in those variables, and what sort
 * The actual observed data - this will inform scales, transformations and may lead you into presenting results in multiple different plots, or all in a single plot.
@@ -225,233 +176,194 @@ Sam Can we make it relevant to observational studies as well as expts?</p>
 <div id="example-data" class="section level2">
 <h2><span class="header-section-number">4.4</span> Example Data</h2>
 <p>The following apply to any response that is measured on experimental units, even if we usually think of a continuous variable typified by ‘yield’. We are going to use some simulated data in this document to show the process for comparing ‘yield’ across a factorial experiment. The design incorporates two treatment factors - “Type” (A, B or C) and “Inputs” (0, 100 or 200). There were 20 farmers who all included the 9 treatment combinations. The 20 farmers are split across 3 sites (X, Y and Z) and we may also be interested in assessing the gender of the farmer (Male or Female).</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="factor.html#cb1-1"></a><span class="kw">set.seed</span>(<span class="dv">46</span>)</span>
-<span id="cb1-2"><a href="factor.html#cb1-2"></a></span>
-<span id="cb1-3"><a href="factor.html#cb1-3"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
-<pre><code>## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --</code></pre>
-<pre><code>## v ggplot2 3.3.3     v purrr   0.3.4
-## v tibble  3.0.5     v dplyr   1.0.3
-## v tidyr   1.1.2     v stringr 1.4.0
-## v readr   1.4.0     v forcats 0.5.0</code></pre>
-<pre><code>## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()</code></pre>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="factor.html#cb5-1"></a>dt1&lt;-<span class="kw">expand.grid</span>(<span class="dt">Type=</span><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>),<span class="dt">Inputs=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">100</span>,<span class="dv">200</span>),<span class="dt">Farmer=</span><span class="dv">1</span><span class="op">:</span><span class="dv">20</span>) <span class="op">%&gt;%</span></span>
-<span id="cb5-2"><a href="factor.html#cb5-2"></a><span class="st">  </span><span class="kw">full_join</span>(<span class="kw">data.frame</span>(<span class="dt">Farmer=</span><span class="dv">1</span><span class="op">:</span><span class="dv">20</span>,<span class="dt">Gender=</span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;Male&quot;</span>,<span class="st">&quot;Female&quot;</span>),<span class="dv">20</span>,<span class="dt">replace=</span><span class="ot">TRUE</span>),<span class="dt">Site=</span><span class="kw">c</span>(<span class="kw">rep</span>(<span class="st">&quot;X&quot;</span>,<span class="dv">8</span>),<span class="kw">rep</span>(<span class="st">&quot;Y&quot;</span>,<span class="dv">7</span>),<span class="kw">rep</span>(<span class="st">&quot;Z&quot;</span>,<span class="dv">5</span>)),<span class="dt">ranef=</span><span class="kw">rnorm</span>(<span class="dv">20</span>,<span class="dt">sd=</span><span class="dv">2</span>)))</span></code></pre></div>
-<pre><code>## Joining, by = &quot;Farmer&quot;</code></pre>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="factor.html#cb7-1"></a><span class="co">## simulations. Ignore Gender.</span></span>
-<span id="cb7-2"><a href="factor.html#cb7-2"></a><span class="co">## Sites different - X high Y low Z middle</span></span>
-<span id="cb7-3"><a href="factor.html#cb7-3"></a><span class="co">## Inputs different - increase with Input</span></span>
-<span id="cb7-4"><a href="factor.html#cb7-4"></a><span class="co">## Type effect - C high with high input and high with X</span></span>
-<span id="cb7-5"><a href="factor.html#cb7-5"></a><span class="co">## B high with low input and high with Y</span></span>
-<span id="cb7-6"><a href="factor.html#cb7-6"></a><span class="co">## A in middle</span></span>
-<span id="cb7-7"><a href="factor.html#cb7-7"></a>dt1<span class="op">$</span>Yield&lt;-<span class="ot">NA</span></span>
-<span id="cb7-8"><a href="factor.html#cb7-8"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;X&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">0</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;A&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">8</span>,<span class="dv">10</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-9"><a href="factor.html#cb7-9"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;X&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">100</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;A&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">8</span>,<span class="dv">12</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-10"><a href="factor.html#cb7-10"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;X&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">200</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;A&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">8</span>,<span class="dv">15</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-11"><a href="factor.html#cb7-11"></a></span>
-<span id="cb7-12"><a href="factor.html#cb7-12"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;X&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">0</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;B&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-13"><a href="factor.html#cb7-13"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;X&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">100</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;B&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">8</span>,<span class="dv">10</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-14"><a href="factor.html#cb7-14"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;X&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">200</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;B&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">8</span>,<span class="dv">11</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-15"><a href="factor.html#cb7-15"></a></span>
-<span id="cb7-16"><a href="factor.html#cb7-16"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;X&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">0</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;C&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">8</span>,<span class="dv">12</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-17"><a href="factor.html#cb7-17"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;X&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">100</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;C&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">8</span>,<span class="dv">15</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-18"><a href="factor.html#cb7-18"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;X&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">200</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;C&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">8</span>,<span class="dv">18</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-19"><a href="factor.html#cb7-19"></a></span>
-<span id="cb7-20"><a href="factor.html#cb7-20"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Y&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">0</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;A&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">7</span>,<span class="dv">5</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-21"><a href="factor.html#cb7-21"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Y&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">100</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;A&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">7</span>,<span class="dv">6</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-22"><a href="factor.html#cb7-22"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Y&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">200</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;A&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">7</span>,<span class="dv">7</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-23"><a href="factor.html#cb7-23"></a></span>
-<span id="cb7-24"><a href="factor.html#cb7-24"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Y&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">0</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;B&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">7</span>,<span class="dv">7</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-25"><a href="factor.html#cb7-25"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Y&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">100</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;B&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">7</span>,<span class="dv">9</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-26"><a href="factor.html#cb7-26"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Y&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">200</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;B&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">7</span>,<span class="dv">10</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-27"><a href="factor.html#cb7-27"></a></span>
-<span id="cb7-28"><a href="factor.html#cb7-28"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Y&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">0</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;C&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">7</span>,<span class="dv">5</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-29"><a href="factor.html#cb7-29"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Y&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">100</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;C&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">7</span>,<span class="dv">6</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-30"><a href="factor.html#cb7-30"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Y&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">200</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;C&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">7</span>,<span class="dv">7</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-31"><a href="factor.html#cb7-31"></a></span>
-<span id="cb7-32"><a href="factor.html#cb7-32"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Z&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">0</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;A&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-33"><a href="factor.html#cb7-33"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Z&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">100</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;A&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">5</span>,<span class="dv">12</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-34"><a href="factor.html#cb7-34"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Z&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">200</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;A&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">5</span>,<span class="dv">15</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-35"><a href="factor.html#cb7-35"></a></span>
-<span id="cb7-36"><a href="factor.html#cb7-36"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Z&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">0</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;B&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-37"><a href="factor.html#cb7-37"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Z&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">100</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;B&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-38"><a href="factor.html#cb7-38"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Z&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">200</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;B&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">5</span>,<span class="dv">11</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-39"><a href="factor.html#cb7-39"></a></span>
-<span id="cb7-40"><a href="factor.html#cb7-40"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Z&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">0</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;C&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-41"><a href="factor.html#cb7-41"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Z&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">100</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;C&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">5</span>,<span class="dv">12</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-42"><a href="factor.html#cb7-42"></a>dt1<span class="op">$</span>Yield&lt;-<span class="kw">ifelse</span>(dt1<span class="op">$</span>Site<span class="op">==</span><span class="st">&quot;Z&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Inputs<span class="op">==</span><span class="dv">200</span> <span class="op">&amp;</span><span class="st"> </span>dt1<span class="op">$</span>Type <span class="op">==</span><span class="st"> &quot;C&quot;</span>, <span class="kw">rnorm</span>(<span class="dv">5</span>,<span class="dv">15</span>,<span class="dv">2</span>),dt1<span class="op">$</span>Yield)</span>
-<span id="cb7-43"><a href="factor.html#cb7-43"></a></span>
-<span id="cb7-44"><a href="factor.html#cb7-44"></a>dt1<span class="op">$</span>Yield&lt;-dt1<span class="op">$</span>Yield<span class="op">+</span><span class="kw">rnorm</span>(<span class="kw">nrow</span>(dt1),<span class="dt">mean=</span>dt1<span class="op">$</span>ranef,<span class="dt">sd=</span><span class="fl">0.1</span>)</span>
-<span id="cb7-45"><a href="factor.html#cb7-45"></a>dt1<span class="op">$</span>Inputs&lt;-<span class="kw">factor</span>(dt1<span class="op">$</span>Inputs)</span></code></pre></div>
+<div id="htmlwidget-1bef4f02dc027f3e5de7" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1bef4f02dc027f3e5de7">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117","118","119","120","121","122","123","124","125","126","127","128","129","130","131","132","133","134","135","136","137","138","139","140","141","142","143","144","145","146","147","148","149","150","151","152","153","154","155","156","157","158","159","160","161","162","163","164","165","166","167","168","169","170","171","172","173","174","175","176","177","178","179","180"],["A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C","A","B","C"],[0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200,0,0,0,100,100,100,200,200,200],[1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,9,9,9,9,9,9,9,9,9,10,10,10,10,10,10,10,10,10,11,11,11,11,11,11,11,11,11,12,12,12,12,12,12,12,12,12,13,13,13,13,13,13,13,13,13,14,14,14,14,14,14,14,14,14,15,15,15,15,15,15,15,15,15,16,16,16,16,16,16,16,16,16,17,17,17,17,17,17,17,17,17,18,18,18,18,18,18,18,18,18,19,19,19,19,19,19,19,19,19,20,20,20,20,20,20,20,20,20],["Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Male","Male","Male","Male","Male","Male","Male","Male","Male","Female","Female","Female","Female","Female","Female","Female","Female","Female","Male","Male","Male","Male","Male","Male","Male","Male","Male","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Male","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Male","Male","Male","Male","Male","Male","Male","Male","Male"],["X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Y","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z","Z"],[10,9.4,14.7,14.8,14.4,16.5,15.1,9.9,20.3,14.9,14.8,17,13.7,15.1,21,20.4,14.7,21.7,5,4.2,6,7.8,6.5,12,13.8,5.7,15.4,8.4,9.2,10.2,14.1,9.2,11.9,10.1,11.4,18.6,11.5,7.3,12.8,10.9,14.1,12.5,14.8,10.2,15.5,3.2,7.8,6,8.8,7.2,13.3,11.8,7.5,16.8,14,10.5,13.1,16.2,10.5,16.1,16.6,9.9,12,10.4,11.4,10.6,14.5,15.5,13.2,15.7,11.1,24,8.8,3.1,5.3,6.6,6,4.6,5.9,9.5,9.7,5.2,9.4,8.6,6.4,14,7.6,3.7,8.7,7.9,4.9,6.3,3.2,7.7,9.5,5.8,6.1,9.3,8.8,6.6,6.5,4.6,4.9,8.4,5.5,5.3,6.5,7.1,7.7,4.4,8.7,6.1,6.2,6.5,3.5,9.8,9,7.4,12.6,5.6,12,10.2,7.9,11.5,14.3,12.7,5.3,5.5,7.1,7.2,10.5,3.4,3.1,12.4,4,6.1,3.9,6.2,13.5,7.2,9,14,14,14.9,10.5,7.8,8.9,11.1,10.2,10.3,12.1,14.4,14.9,8.6,7.1,8.4,7.9,10.9,12,16.9,13.2,16.9,9.6,6.4,5.3,15.2,6.2,6.9,8.6,7.6,10.8,14,5.8,14.4,13.2,14.9,12.2,15,11.2,17]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Type<\/th>\n      <th>Inputs<\/th>\n      <th>Farmer<\/th>\n      <th>Gender<\/th>\n      <th>Site<\/th>\n      <th>Yield<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,6]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="key-ideas" class="section level2">
 <h2><span class="header-section-number">4.5</span> Key ideas</h2>
 <ol style="list-style-type: decimal">
-<li>Response to stimulus or input is observed at discrete treatment levels. In the example dataset we have created the ‘response’ is yield and the main treatment levels we are considering are the combinations of ‘type’ and ‘inputs’. We have 9 combinations in total, three levels of type and three levels of inputs, and 20 observations of each combination coming from the 20 farms. Therefore we have 9 mean yield values, and 9 distributions of yield, that we need to compare to be able to assess the results.</li>
+<li><blockquote>
+<p><em>Response to stimulus or input is observed at discrete levels of a factor</em>. In the example dataset we have a factorial experiment where the ‘response’ is yield and the designed treatment factors we are considering are the combinations of ‘type’ and ‘inputs’.
+We have 9 combinations or ‘treatments’ in total: three levels of type and three levels of inputs, and 20 observations of each combination coming from the 20 farms. Therefore we have 9 mean yield values, and 9 distributions of yield, that we need to compare to be able to assess the results. Simply looking at the numbers in a table, or in a plot displayed as if these 9 treatments as independent is going to be a poor representation of the results. The numbers and plot will allow us simply to identify the highest (C/200) and lowest (b/0) treatment combinations. But it will not allow us to make any inferences easily about the overall effects of type and inputs, or the interactions between them.</p>
+</blockquote></li>
 </ol>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="factor.html#cb8-1"></a>dt1 <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb8-2"><a href="factor.html#cb8-2"></a><span class="st">  </span><span class="kw">group_by</span>(Type,Inputs) <span class="op">%&gt;%</span></span>
-<span id="cb8-3"><a href="factor.html#cb8-3"></a><span class="st">    </span><span class="kw">summarise</span>(<span class="st">&quot;n&quot;</span>=<span class="kw">n</span>(),<span class="st">&quot;Mean Yield&quot;</span>=<span class="kw">round</span>(<span class="kw">mean</span>(Yield),<span class="dv">1</span>),<span class="st">&quot;SD Yield&quot;</span>=<span class="kw">round</span>(<span class="kw">sd</span>(Yield),<span class="dv">1</span>))</span></code></pre></div>
-<pre><code>## `summarise()` has grouped output by &#39;Type&#39;. You can override using the `.groups` argument.</code></pre>
-<pre><code>## # A tibble: 9 x 5
-## # Groups:   Type [3]
-##   Type  Inputs     n `Mean Yield` `SD Yield`
-##   &lt;fct&gt; &lt;fct&gt;  &lt;int&gt;        &lt;dbl&gt;      &lt;dbl&gt;
-## 1 A     0         20          8.6        3.3
-## 2 A     100       20         10.6        3.6
-## 3 A     200       20         11.2        5.1
-## 4 B     0         20          7.7        3  
-## 5 B     100       20         10.3        3.3
-## 6 B     200       20         10.6        2.7
-## 7 C     0         20          8.8        3.8
-## 8 C     100       20         10.4        4.5
-## 9 C     200       20         13.9        5.2</code></pre>
-<p>Simply looking at the numbers in a table, or conducting the standard analysis of variance, is not going to tell us as much as a well thought through visualisation. However the ANOVA results here do help to inform us that there are statistically significant effects of type, inputs and the interaction between the type and inputs within this trial.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="factor.html#cb11-1"></a><span class="kw">library</span>(lmerTest)</span></code></pre></div>
-<pre><code>## Loading required package: lme4</code></pre>
-<pre><code>## Loading required package: Matrix</code></pre>
-<pre><code>## 
-## Attaching package: &#39;Matrix&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:tidyr&#39;:
-## 
-##     expand, pack, unpack</code></pre>
-<pre><code>## 
-## Attaching package: &#39;lmerTest&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:lme4&#39;:
-## 
-##     lmer</code></pre>
-<pre><code>## The following object is masked from &#39;package:stats&#39;:
-## 
-##     step</code></pre>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="factor.html#cb19-1"></a><span class="kw">lmer</span>(Yield<span class="op">~</span>Type<span class="op">*</span>Inputs<span class="op">+</span>(<span class="dv">1</span><span class="op">|</span>Farmer),<span class="dt">data=</span>dt1) <span class="op">%&gt;%</span></span>
-<span id="cb19-2"><a href="factor.html#cb19-2"></a><span class="st">  </span><span class="kw">anova</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Type</th>
+<th align="right">Inputs</th>
+<th align="right">n</th>
+<th align="right">Mean Yield</th>
+<th align="right">SD Yield</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">A</td>
+<td align="right">0</td>
+<td align="right">20</td>
+<td align="right">8.6</td>
+<td align="right">3.3</td>
+</tr>
+<tr class="even">
+<td align="left">A</td>
+<td align="right">100</td>
+<td align="right">20</td>
+<td align="right">10.6</td>
+<td align="right">3.6</td>
+</tr>
+<tr class="odd">
+<td align="left">A</td>
+<td align="right">200</td>
+<td align="right">20</td>
+<td align="right">11.2</td>
+<td align="right">5.1</td>
+</tr>
+<tr class="even">
+<td align="left">B</td>
+<td align="right">0</td>
+<td align="right">20</td>
+<td align="right">7.7</td>
+<td align="right">3.1</td>
+</tr>
+<tr class="odd">
+<td align="left">B</td>
+<td align="right">100</td>
+<td align="right">20</td>
+<td align="right">10.3</td>
+<td align="right">3.3</td>
+</tr>
+<tr class="even">
+<td align="left">B</td>
+<td align="right">200</td>
+<td align="right">20</td>
+<td align="right">10.6</td>
+<td align="right">2.7</td>
+</tr>
+<tr class="odd">
+<td align="left">C</td>
+<td align="right">0</td>
+<td align="right">20</td>
+<td align="right">8.8</td>
+<td align="right">3.9</td>
+</tr>
+<tr class="even">
+<td align="left">C</td>
+<td align="right">100</td>
+<td align="right">20</td>
+<td align="right">10.4</td>
+<td align="right">4.5</td>
+</tr>
+<tr class="odd">
+<td align="left">C</td>
+<td align="right">200</td>
+<td align="right">20</td>
+<td align="right">13.9</td>
+<td align="right">5.2</td>
+</tr>
+</tbody>
+</table>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-7-1.png" width="480" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li><blockquote>
+<p>A conventional one-factor plot. The response on the y axis and the input or stimulus or irsk factor on the x axis.
+We could seperate out the two factors and produce seperate plots for each. This would be more informative than what we see in stage 1, since we could more easily gain an understanding of the impacts of each factor. However it would be an extremely limited interpretation by ignoring the secondary factors.</p>
+</blockquote></li>
+</ol>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-8-1.png" width="480" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-9-1.png" width="480" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li><blockquote>
+<p>In most cases the interaction between factors will be of most interest. We want to understand if the impact of factor <code>x</code> and factor <code>y</code> are operating independently or if they in some way modify each other. The easiest way to understand this is through investigation of whether the trends are parallel. Parallel lines in an interaction plot suggest there is no interaction between the variables. Non-parallel lines, whether they diverge or cross, indicate there is an interaction. The ability to assess this is another reason why using lines is a much more visually powerful way to illustrate trends than using bars.</p>
+</blockquote></li>
+</ol>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-10-1.png" width="480" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li><blockquote>
+<p>The interaction of “Inputs X Type” is the same as the interaction of “Type X Inputs”, and the presentation provides identical information. But the way we interpret and read the plots is not the same. We may find it easier to read one particular orientation over the other. Or both orientations may be useful to highlight particular patterns which only become clearer when the positioning of the elements is reversed. It will depend on the results, and the variables themselves whether one will be more effective or whether both may be possiblities. There may not be only one way to present.</p>
+</blockquote></li>
+</ol>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-1.png" width="480" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-12-1.png" width="480" /></p>
+<ol start="5" style="list-style-type: decimal">
+<li><blockquote>
+<p>If there are more than two factors the same applies but more choices now and higher order interactions hard to interpret. Two choices:
+We could consider combing two factors together, if they are seen as being of equal importance, and have one line for each combination of factors. But this quickly becomes hard to interpret.</p>
+</blockquote></li>
+</ol>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-13-1.png" width="480" /></p>
+<ol start="6" style="list-style-type: decimal">
+<li><blockquote>
+<p>If there are two factors of primary interest, where the third is a modifying variable or different context, then it makes sense to use facets. In the example data we have this exact case - with Inputs and Types being our variables of primary interest, and Site being a contextual variable. Therefore plotting into multiple facets allows us to compare whether the relationships within the experiment (Input by Type) vary by the location of the experiment.</p>
+</blockquote></li>
+</ol>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-14-1.png" width="480" /></p>
+<ol start="7" style="list-style-type: decimal">
+<li><blockquote>
+<p>In practice, the observations on the graph come with uncertainty in their position. Part of the function of statistical analysis is to estimate the uncertainty so that (a) it can also be represented on the graph (b) we can separate pattern that is noise (possibly just due to random, unrepeatable variation) from that which is signal (repeatable, consistent across repetitions).</p>
+</blockquote></li>
+</ol>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-15-1.png" width="480" /></p>
+<ol start="8" style="list-style-type: decimal">
+<li><blockquote>
+<p>If the effect of one or more factors is considered noise then we can average over them and display main effects. In all of the presentations so far we have averaged over at least one of the factors to illustrate a point. But when putting the final story together we need to consider which factors are important. We should also be looking to our formal statistical analysis for guidance here, by considering which factors we have sufficient evidence to conclude are components of significant interactions. If the variables themselves are significant, but interactions are not, then averaging over these variables will be OK in terms of representing the key effects.</p>
+</blockquote></li>
+</ol>
 <pre><code>## Type III Analysis of Variance Table with Satterthwaite&#39;s method
-##             Sum Sq Mean Sq NumDF DenDF F value    Pr(&gt;F)    
-## Type         71.00   35.50     2   152  5.0294  0.007674 ** 
-## Inputs      374.25  187.12     2   152 26.5108 1.328e-10 ***
-## Type:Inputs  70.92   17.73     4   152  2.5119  0.044062 *  
+##                          Sum Sq Mean Sq NumDF   DenDF F value    Pr(&gt;F)    
+## Inputs                  251.632 251.632     1 130.000 50.7049 6.536e-11 ***
+## Type                      9.814   4.907     2 130.000  0.9888  0.374804    
+## Site                     34.314  17.157     2  19.068  3.4572  0.052346 .  
+## Gender                    1.040   1.040     1  19.068  0.2095  0.652296    
+## Inputs:Type              22.160  11.080     2 130.000  2.2326  0.111343    
+## Inputs:Site              49.803  24.902     2 130.000  5.0178  0.007958 ** 
+## Type:Site                57.372  14.343     4 130.000  2.8902  0.024828 *  
+## Inputs:Gender             0.232   0.232     1 130.000  0.0467  0.829242    
+## Type:Gender              13.131   6.566     2 130.000  1.3230  0.269891    
+## Site:Gender              20.350  10.175     2  19.068  2.0503  0.156131    
+## Inputs:Type:Site         71.161  17.790     4 130.000  3.5848  0.008297 ** 
+## Inputs:Type:Gender        4.941   2.470     2 130.000  0.4978  0.609017    
+## Inputs:Site:Gender       16.643   8.321     2 130.000  1.6768  0.190987    
+## Type:Site:Gender         19.253   4.813     4 130.000  0.9699  0.426402    
+## Inputs:Type:Site:Gender   8.019   2.005     4 130.000  0.4040  0.805502    
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
-<ol start="2" style="list-style-type: decimal">
-<li>Conventional plot: input or stimulus F = horizontal , response y = vertical</li>
-</ol>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="factor.html#cb21-1"></a><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">y=</span>Yield,<span class="dt">x=</span>Type,<span class="dt">group=</span><span class="dv">1</span>),<span class="dt">data=</span>dt1) <span class="op">+</span></span>
-<span id="cb21-2"><a href="factor.html#cb21-2"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">geom=</span><span class="st">&quot;line&quot;</span>)<span class="op">+</span></span>
-<span id="cb21-3"><a href="factor.html#cb21-3"></a><span class="st">    </span><span class="kw">stat_summary</span>(<span class="dt">geom=</span><span class="st">&quot;point&quot;</span>,<span class="dt">colour=</span><span class="st">&quot;red&quot;</span>,<span class="dt">size=</span><span class="dv">4</span>)<span class="op">+</span></span>
-<span id="cb21-4"><a href="factor.html#cb21-4"></a><span class="st">      </span><span class="kw">ylab</span>(<span class="st">&quot;Mean Yield&quot;</span>)</span></code></pre></div>
-<pre><code>## No summary function supplied, defaulting to `mean_se()`
-## No summary function supplied, defaulting to `mean_se()`</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="factor.html#cb23-1"></a><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">y=</span>Yield,<span class="dt">x=</span>Inputs,<span class="dt">group=</span><span class="dv">1</span>),<span class="dt">data=</span>dt1) <span class="op">+</span></span>
-<span id="cb23-2"><a href="factor.html#cb23-2"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">geom=</span><span class="st">&quot;line&quot;</span>)<span class="op">+</span></span>
-<span id="cb23-3"><a href="factor.html#cb23-3"></a><span class="st">    </span><span class="kw">stat_summary</span>(<span class="dt">geom=</span><span class="st">&quot;point&quot;</span>,<span class="dt">colour=</span><span class="st">&quot;red&quot;</span>,<span class="dt">size=</span><span class="dv">4</span>)<span class="op">+</span></span>
-<span id="cb23-4"><a href="factor.html#cb23-4"></a><span class="st">      </span><span class="kw">ylab</span>(<span class="st">&quot;Mean Yield&quot;</span>)</span></code></pre></div>
-<pre><code>## No summary function supplied, defaulting to `mean_se()`
-## No summary function supplied, defaulting to `mean_se()`</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<ol start="3" style="list-style-type: decimal">
-<li>Interaction: modification of, or non-parallel, response curves</li>
-</ol>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="factor.html#cb25-1"></a><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">y=</span>Yield,<span class="dt">x=</span>Inputs,<span class="dt">group=</span>Type,<span class="dt">colour=</span>Type),<span class="dt">data=</span>dt1) <span class="op">+</span></span>
-<span id="cb25-2"><a href="factor.html#cb25-2"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">geom=</span><span class="st">&quot;line&quot;</span>)<span class="op">+</span></span>
-<span id="cb25-3"><a href="factor.html#cb25-3"></a><span class="st">    </span><span class="kw">stat_summary</span>(<span class="dt">geom=</span><span class="st">&quot;point&quot;</span>,<span class="dt">size=</span><span class="dv">4</span>)<span class="op">+</span></span>
-<span id="cb25-4"><a href="factor.html#cb25-4"></a><span class="st">      </span><span class="kw">ylab</span>(<span class="st">&quot;Mean Yield&quot;</span>)</span></code></pre></div>
-<pre><code>## No summary function supplied, defaulting to `mean_se()`
-## No summary function supplied, defaulting to `mean_se()`</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-<ol start="4" style="list-style-type: decimal">
-<li>More than two factors (F, A, B,…): same applies but more choices now and higher order interactions hard to interpret. Two choices:</li>
-<li>A, B, … of equal status or interest: one line for each combination of A and B.</li>
-</ol>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="factor.html#cb27-1"></a><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">y=</span>Yield,<span class="dt">x=</span>Inputs,<span class="dt">group=</span><span class="kw">interaction</span>(Type,Site),<span class="dt">colour=</span><span class="kw">interaction</span>(Type,Site)),<span class="dt">data=</span>dt1) <span class="op">+</span></span>
-<span id="cb27-2"><a href="factor.html#cb27-2"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">geom=</span><span class="st">&quot;line&quot;</span>)<span class="op">+</span></span>
-<span id="cb27-3"><a href="factor.html#cb27-3"></a><span class="st">    </span><span class="kw">stat_summary</span>(<span class="dt">geom=</span><span class="st">&quot;point&quot;</span>,<span class="dt">size=</span><span class="dv">4</span>)<span class="op">+</span></span>
-<span id="cb27-4"><a href="factor.html#cb27-4"></a><span class="st">      </span><span class="kw">ylab</span>(<span class="st">&quot;Mean Yield&quot;</span>)</span></code></pre></div>
-<pre><code>## No summary function supplied, defaulting to `mean_se()`
-## No summary function supplied, defaulting to `mean_se()`</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
-<ol start="6" style="list-style-type: decimal">
-<li>Primary focus on FxA, with B… modifiers or varying context: use B,… as facets so that the FxA pattern can be compared.</li>
-</ol>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="factor.html#cb29-1"></a><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">y=</span>Yield,<span class="dt">x=</span>Inputs,<span class="dt">group=</span>Type,<span class="dt">colour=</span>Type),<span class="dt">data=</span>dt1) <span class="op">+</span></span>
-<span id="cb29-2"><a href="factor.html#cb29-2"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">geom=</span><span class="st">&quot;line&quot;</span>)<span class="op">+</span></span>
-<span id="cb29-3"><a href="factor.html#cb29-3"></a><span class="st">    </span><span class="kw">stat_summary</span>(<span class="dt">geom=</span><span class="st">&quot;point&quot;</span>,<span class="dt">size=</span><span class="dv">4</span>)<span class="op">+</span></span>
-<span id="cb29-4"><a href="factor.html#cb29-4"></a><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>Site)<span class="op">+</span></span>
-<span id="cb29-5"><a href="factor.html#cb29-5"></a><span class="st">      </span><span class="kw">ylab</span>(<span class="st">&quot;Mean Yield&quot;</span>)</span></code></pre></div>
-<pre><code>## No summary function supplied, defaulting to `mean_se()`
-## No summary function supplied, defaulting to `mean_se()`
-## No summary function supplied, defaulting to `mean_se()`
-## No summary function supplied, defaulting to `mean_se()`
-## No summary function supplied, defaulting to `mean_se()`
-## No summary function supplied, defaulting to `mean_se()`</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
-<ol start="7" style="list-style-type: decimal">
-<li>The FxA interaction and presentation is identical information content as the AxF interaction and presentation. But the message that it is easy to read from the two is not the same. Hence (a) for a specific objective or story, one will be more effective than another, (b) there may not be only one way to present, (c) with &gt;2 factors the possibilities increase rapidly</li>
-</ol>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="factor.html#cb31-1"></a><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">y=</span>Yield,<span class="dt">x=</span>Site,<span class="dt">group=</span>Type,<span class="dt">colour=</span>Type),<span class="dt">data=</span>dt1) <span class="op">+</span></span>
-<span id="cb31-2"><a href="factor.html#cb31-2"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">geom=</span><span class="st">&quot;line&quot;</span>)<span class="op">+</span></span>
-<span id="cb31-3"><a href="factor.html#cb31-3"></a><span class="st">    </span><span class="kw">stat_summary</span>(<span class="dt">geom=</span><span class="st">&quot;point&quot;</span>,<span class="dt">size=</span><span class="dv">4</span>)<span class="op">+</span></span>
-<span id="cb31-4"><a href="factor.html#cb31-4"></a><span class="st">      </span><span class="kw">ylab</span>(<span class="st">&quot;Mean Yield&quot;</span>)</span></code></pre></div>
-<pre><code>## No summary function supplied, defaulting to `mean_se()`
-## No summary function supplied, defaulting to `mean_se()`</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="factor.html#cb33-1"></a><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">y=</span>Yield,<span class="dt">x=</span>Type,<span class="dt">group=</span>Site,<span class="dt">colour=</span>Site),<span class="dt">data=</span>dt1) <span class="op">+</span></span>
-<span id="cb33-2"><a href="factor.html#cb33-2"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">geom=</span><span class="st">&quot;line&quot;</span>)<span class="op">+</span></span>
-<span id="cb33-3"><a href="factor.html#cb33-3"></a><span class="st">    </span><span class="kw">stat_summary</span>(<span class="dt">geom=</span><span class="st">&quot;point&quot;</span>,<span class="dt">size=</span><span class="dv">4</span>)<span class="op">+</span></span>
-<span id="cb33-4"><a href="factor.html#cb33-4"></a><span class="st">      </span><span class="kw">ylab</span>(<span class="st">&quot;Mean Yield&quot;</span>)</span></code></pre></div>
-<pre><code>## No summary function supplied, defaulting to `mean_se()`
-## No summary function supplied, defaulting to `mean_se()`</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
-<p><img src="img/Picture3.jpg" alt="image3" />
-8. In practice, the observations on the graph come with uncertainty in their position. Part of the function of statistical analysis is to estimate the uncertainty so that (a) it can also be represented on the graph (b) we can separate pattern that is noise (possibly just due to random, unrepeatable variation) from that which is signal (repeatable, consistent across repetitions).</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="factor.html#cb35-1"></a><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">y=</span>Yield,<span class="dt">x=</span>Type,<span class="dt">group=</span>Site,<span class="dt">colour=</span>Site),<span class="dt">data=</span>dt1) <span class="op">+</span></span>
-<span id="cb35-2"><a href="factor.html#cb35-2"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">geom=</span><span class="st">&quot;line&quot;</span>)<span class="op">+</span></span>
-<span id="cb35-3"><a href="factor.html#cb35-3"></a><span class="st">    </span><span class="kw">stat_summary</span>(<span class="dt">fun.data=</span>mean_cl_normal)<span class="op">+</span></span>
-<span id="cb35-4"><a href="factor.html#cb35-4"></a><span class="st">      </span><span class="kw">ylab</span>(<span class="st">&quot;Mean Yield&quot;</span>)</span></code></pre></div>
-<pre><code>## No summary function supplied, defaulting to `mean_se()`</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
-<ol start="9" style="list-style-type: decimal">
-<li>If the effect of one or more factors is considered noise then we can average over them and display main effects (… hard to explain this concisely. Its not just main effects but eg FxA in an experiment with F, A and B…)</li>
-</ol>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="factor.html#cb37-1"></a><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">y=</span>Yield,<span class="dt">x=</span>Inputs),<span class="dt">data=</span>dt1) <span class="op">+</span></span>
-<span id="cb37-2"><a href="factor.html#cb37-2"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">geom=</span><span class="st">&quot;line&quot;</span>,<span class="kw">aes</span>(<span class="dt">group=</span><span class="dv">1</span>))<span class="op">+</span></span>
-<span id="cb37-3"><a href="factor.html#cb37-3"></a><span class="st">    </span><span class="kw">stat_summary</span>(<span class="dt">geom=</span><span class="st">&quot;point&quot;</span>,<span class="kw">aes</span>(<span class="dt">group=</span>Gender,<span class="dt">col=</span>Gender),<span class="dt">size=</span><span class="dv">4</span>)<span class="op">+</span></span>
-<span id="cb37-4"><a href="factor.html#cb37-4"></a><span class="st">      </span><span class="kw">ylab</span>(<span class="st">&quot;Mean Yield&quot;</span>)</span></code></pre></div>
-<pre><code>## No summary function supplied, defaulting to `mean_se()`
-## No summary function supplied, defaulting to `mean_se()`</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p>In this case our analysis suggests Gender is not a statistically significant factor, but Inputs, Type, Site and all of the interactions between these variables are statistically significant. Therefore we should reflect that in our final plot - not showing the interactions between the three factors will be misleading, but averaging over gender will not cause any issues.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-17-1.png" width="480" /></p>
 </div>
-<div id="fun-shiny-test" class="section level2">
-<h2><span class="header-section-number">4.6</span> Fun shiny test</h2>
+<div id="shiny" class="section level2">
+<h2><span class="header-section-number">4.6</span> Shiny</h2>
 <iframe src="https://shiny.stats4sd.org/factorialexperiments" width="100%" height="1000px">
 </iframe>
 </div>
-<div id="in-practice" class="section level2">
-<h2><span class="header-section-number">4.7</span> In practice</h2>
+<div id="the-general-process" class="section level2">
+<h2><span class="header-section-number">4.7</span> The general process</h2>
 <div id="step-1-set-out-the-objectives-message-or-hypothesis-for-the-story-you-want-to-tell-with-the-graph-you-are-designing" class="section level3">
 <h3><span class="header-section-number">4.7.1</span> Step 1: Set out the objectives, message or hypothesis for the story you want to tell with the graph you are designing</h3>
 <ol style="list-style-type: lower-alpha">
 <li><blockquote>
-<p>There may be several in one data set, so think which it is. Multiple graphs can be created to illustrate different messages. If it can be stated as something like ‘We know y responds to F. The hypothesis investigated concerns the way this response is modified by A. We expect… This modification will be higher at B=1 than at B=0 …’</p>
+<p>There may be several messages from the same data set, so think which it is. Using the same graph for multiple purposes may sometimes be possible, but using multiple well constructed graphs will likely do a better job of illustrating these different messages.</p>
 </blockquote></li>
 <li><blockquote>
-<p>In all this discussion, it does not really matter which factors are strictly treatments (randomised in the design) and which are unrandomized context factors (eg location). It makes a difference to the statistical analysis and the nature of inference, but not to the drawing of graphs.</p>
+<p>It does not really matter which factors are strictly treatments (randomised in the design) and which are unrandomized context factors (eg location) or observed characteristics. These maks a difference to the statistical analysis and the nature of inference, but not to the drawing of graphs.</p>
 </blockquote></li>
 <li><blockquote>
-<p>Likewise, complexities in layout (eg Is it split-plot design? Where there incomplete blocks?…) affect the stats not design of the graphs.</p>
+<p>Likewise, complexities in layout (eg Is it split-plot design? Where there incomplete blocks? Is it a survey?) will affect the statistics, and maybe the calculation of the estimates being plotted, but not to the general design of the graphs.</p>
 </blockquote></li>
 <li><blockquote>
-<p>Experiments often have treatment structure that is partially or not-quite a factorial. That’s ok – most of what is here still applies but there might be a few points that are not there or extras added.
-<img src="img/Picture5.png" alt="image5" /></p>
+<p>Experiments often have treatment structure that is partially or not-quite a factorial, if not all treatment combinations are present. Or there may be very poorly estimated combinations with just a few observations where the plots may be misleading if they were to be included. That’s OK – most of what is here still applies but there might be a few points that are not there or extras added. Only showing a subset of the data to focus on the specific comparisons is also a good strategy to focus the message of the plot, without the additional confusion of incomplete or very low sample size combinations.</p>
 </blockquote></li>
 </ol>
+<div class="figure">
+<img src="img/Picture5.png" alt="" />
+<p class="caption">image5</p>
+</div>
 </div>
 <div id="step-2-remember-experiments-are-set-up-to-make-comparisons" class="section level3">
 <h3><span class="header-section-number">4.7.2</span> Step 2: Remember experiments are set up to make comparisons</h3>
 <ol style="list-style-type: lower-alpha">
 <li><blockquote>
-<p>Generally the absolute level of y is less important than differences.</p>
+<p>Generally the absolute value of y is less important than differences. “Average” rarely exists in reality, farmers are unlikely to obtain the average value of yield, but a comparison of efficacy (“A will likely yield better than B”) is more generalisable and more applicable.</p>
 </blockquote></li>
 </ol>
 </div>
@@ -459,11 +371,12 @@ Sam Can we make it relevant to observational studies as well as expts?</p>
 <h3><span class="header-section-number">4.7.3</span> Step 3: Maintain the visual metaphor</h3>
 <ol style="list-style-type: lower-alpha">
 <li><blockquote>
-<p>One rule of graphics: So we break the rule of response on the vertical axis with something like this:</p>
+<p>One core rule of all graphics, we want to make the way the plot is read intuitive and make sure the audience needs to refer to the axes as little as possible to understand what is being displayed. So we break the rule of response on the vertical axis with something like this:
+<img src="bookdown-demo_files/figure-html/unnamed-chunk-19-1.png" width="480" /></p>
 </blockquote></li>
 <li><blockquote>
-<p>If the horizontal axis is quantitative then the order is natural. If it is qualitative try to find an ordering that adds some value eg – order by level of another variable, by some property of the category,… Definitely do not just keep the data order, which is likely to be nothing more than purely alphabetical.
-<img src="img/Picture6.jpg" alt="image6" /></p>
+<p>If the horizontal axis is quantitative then the order is natural. If it is qualitative try to find an ordering that adds some value eg – order by level of another variable, by some property of the category. Definitely do not just keep the data order, which is likely to be nothing more than purely alphabetical. In the example data we saw earlier re-ordering the sites to go from lowest to highest average yields will provide a much easier and clearer interpretation than the arbitrary alphabetical order.
+<img src="bookdown-demo_files/figure-html/unnamed-chunk-20-1.png" width="480" /></p>
 </blockquote></li>
 </ol>
 </div>
@@ -471,7 +384,7 @@ Sam Can we make it relevant to observational studies as well as expts?</p>
 <h3><span class="header-section-number">4.7.4</span> Step 4: Lines</h3>
 <ol style="list-style-type: lower-alpha">
 <li><blockquote>
-<p>I like to join points even of levels of F are discrete because it shows up which points are logically connected and the concept of interaction = non-parallel become visual.</p>
+<p>Even where levels of the factor are discrete joining points together shows up which points are logically connected and the concept of interaction = non-parallel become visual. Bars are an extremely poor choice of visualisation tool for showing means, variability and comparisons across multiple factors. There use should be limited solely to percentages and frequencies, and even then only when there is a single factor being displayed.</p>
 </blockquote></li>
 </ol>
 </div>
@@ -479,7 +392,7 @@ Sam Can we make it relevant to observational studies as well as expts?</p>
 <h3><span class="header-section-number">4.7.5</span> Step 5: Multiple factors</h3>
 <ol style="list-style-type: lower-alpha">
 <li><blockquote>
-<p>More than2 factors is actually common when you remember that location and year are often there. It would be natural to have an aim of looking at the what response to F is modified by A and whether that is the same each season (S) and local (L)</p>
+<p>More than factors is actually common, even if there are only two ‘treatments’ when you consider location, year are often there. It would be natural to have an aim of looking at the what response to F is modified by A and whether that is the same each season (S) and local (L)</p>
 </blockquote></li>
 </ol>
 </div>
@@ -487,42 +400,34 @@ Sam Can we make it relevant to observational studies as well as expts?</p>
 <h3><span class="header-section-number">4.7.6</span> Step 6: Colours and symbols</h3>
 <ol style="list-style-type: lower-alpha">
 <li><blockquote>
-<p>Remember you can vary colour, symbol, line style…. So if we plot FxAxB it might be with levels of A as solid v broken, levels of B as red v green.
-<img src="img/Picture7.png" alt="image7" /></p>
+<p>Remember you can vary colour, symbol, line style. So if we do choose to plot three factors, with two factors combining to form the lines, a better option would be to have the two factors represented through different aesthetic elements.</p>
 </blockquote></li>
 </ol>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-21-1.png" width="480" /></p>
 </div>
 <div id="step-7-facets" class="section level3">
 <h3><span class="header-section-number">4.7.7</span> Step 7: Facets</h3>
 <ol style="list-style-type: lower-alpha">
 <li><blockquote>
-<p>So the FxA experiment done in 2 locations in each of 2 seasons could be plotted with a facet grid…
-<img src="img/Picture8.jpg" alt="image8" /></p>
+<p>Facets to can make it easier to display even up to four variables simultaneously if we also use a gridded facet layout - e.g. main interaction of interest showing Type by Inputs; but with row facets corresponding to gender and column facets corresponding to location.</p>
 </blockquote></li>
 </ol>
-</div>
-<div id="step-8-interate" class="section level3">
-<h3><span class="header-section-number">4.7.8</span> Step 8: Interate</h3>
-<ol style="list-style-type: lower-alpha">
-<li><blockquote>
-<p>Talking to researchers about real experiments almost always leads to discussion about response to one factor (often known) be modified by one or more others. The challenge: find examples in agric where that is not the case! If you really don’t want to make the distinction then…? Resorting to multiple factors on the x-axis is rarely a great idea….</p>
-</blockquote></li>
-</ol>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 </div>
 <div id="step-9-next-steps" class="section level3">
-<h3><span class="header-section-number">4.7.9</span> Step 9: Next steps</h3>
+<h3><span class="header-section-number">4.7.8</span> Step 9: Next steps</h3>
 <ol style="list-style-type: lower-alpha">
 <li><blockquote>
-<p>Plotting responses that have been averaged over levels of one or more factors ( not getting into messy questions about weights etc)</p>
+<p>Talking to researchers about real experiments almost always leads to discussion about response to one factor (often known) be modified by one or more others. The challenge: find examples where that is not the case!</p>
 </blockquote></li>
 <li><blockquote>
-<p>Statistical significance v practice significance ( eg a graph of main effects might be useful even if there is statistically significant interaction as long as it is small)</p>
+<p>Statistical significance v practice significance e.g. a graph of main effects might be useful even if there is statistically significant interaction as long as it is small. But in general if there is a significant interaction we should be looking to display this and not overlook it for the sake of finding an easy answer.</p>
 </blockquote></li>
 <li><blockquote>
-<p>Representing uncertainty. The standard ‘error bars’ on means are actually meaningless for most experimental data. SEDs and CIs of differences better but only easy for neat experiments. Etc</p>
+<p>Representing uncertainty. The standard ‘error bars’ on means are actually meaningless for most experimental data. SEDs and CIs of differences better but only easy for neat experiments. See chapter {LINK}</p>
 </blockquote></li>
 <li><blockquote>
-<p>Related to points b) and c) – providing context within the plot related to sample sizes and design – build in information to help audience assess the robustness of the level of evidence provided.</p>
+<p>Start thinking about labeling, and visual components beyond just the mechanical composition. See chapter {LINK}</p>
 </blockquote></li>
 </ol>
 
