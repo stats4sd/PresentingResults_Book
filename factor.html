@@ -13,7 +13,7 @@
   
   
   <meta property="og:description" content="This is a document compiling various resources on how to present results from different types of data, for different audiences and different purposes" />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
+  <meta name="github-repo" content="stats4sd/PresentingResults" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 4 Presenting results across multiple factors | Resources on Presenting Results" />
@@ -191,7 +191,6 @@
             <section class="normal" id="section-">
 <div id="factor" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Presenting results across multiple factors</h1>
-<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 4.0.4</code></pre>
 <div id="draft-1" class="section level2">
 <h2><span class="header-section-number">4.1</span> DRAFT</h2>
 </div>
@@ -305,49 +304,47 @@ We have 9 combinations or ‘treatments’ in total: three levels of type and th
 </tr>
 </tbody>
 </table>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-8-1.png" width="480" /></p>
+<p><img src="PresentingResults_files/figure-html/unnamed-chunk-8-1.png" width="480" /></p>
 <ol start="2" style="list-style-type: decimal">
 <li><blockquote>
 <p>A conventional one-factor plot. The response on the y axis and the input or stimulus or irsk factor on the x axis.
 We could seperate out the two factors and produce seperate plots for each. This would be more informative than what we see in stage 1, since we could more easily gain an understanding of the impacts of each factor. However it would be an extremely limited interpretation by ignoring the secondary factors.</p>
 </blockquote></li>
 </ol>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-9-1.png" width="480" /></p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-10-1.png" width="480" /></p>
+<p><img src="PresentingResults_files/figure-html/unnamed-chunk-9-1.png" width="480" /></p>
+<p><img src="PresentingResults_files/figure-html/unnamed-chunk-10-1.png" width="480" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li><blockquote>
 <p>In most cases the interaction between factors will be of most interest. We want to understand if the impact of factor <code>x</code> and factor <code>y</code> are operating independently or if they in some way modify each other. The easiest way to understand this is through investigation of whether the trends are parallel. Parallel lines in an interaction plot suggest there is no interaction between the variables. Non-parallel lines, whether they diverge or cross, indicate there is an interaction. The ability to assess this is another reason why using lines is a much more visually powerful way to illustrate trends than using bars.</p>
 </blockquote></li>
 </ol>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-1.png" width="480" /></p>
+<p><img src="PresentingResults_files/figure-html/unnamed-chunk-11-1.png" width="480" /></p>
 <ol start="4" style="list-style-type: decimal">
 <li><blockquote>
 <p>The interaction of “Inputs X Type” is the same as the interaction of “Type X Inputs”, and the presentation provides identical information. But the way we interpret and read the plots is not the same. We may find it easier to read one particular orientation over the other. Or both orientations may be useful to highlight particular patterns which only become clearer when the positioning of the elements is reversed. It will depend on the results, and the variables themselves whether one will be more effective or whether both may be possiblities. There may not be only one way to present.</p>
 </blockquote></li>
 </ol>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-12-1.png" width="480" /></p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-13-1.png" width="480" /></p>
+<p><img src="PresentingResults_files/figure-html/unnamed-chunk-12-1.png" width="480" /></p>
+<p><img src="PresentingResults_files/figure-html/unnamed-chunk-13-1.png" width="480" /></p>
 <ol start="5" style="list-style-type: decimal">
 <li><blockquote>
 <p>If there are more than two factors the same applies but more choices now and higher order interactions hard to interpret. Two choices:
 We could consider combing two factors together, if they are seen as being of equal importance, and have one line for each combination of factors. But this quickly becomes hard to interpret.</p>
 </blockquote></li>
 </ol>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-14-1.png" width="480" /></p>
+<p><img src="PresentingResults_files/figure-html/unnamed-chunk-14-1.png" width="480" /></p>
 <ol start="6" style="list-style-type: decimal">
 <li><blockquote>
 <p>If there are two factors of primary interest, where the third is a modifying variable or different context, then it makes sense to use facets. In the example data we have this exact case - with Inputs and Types being our variables of primary interest, and Site being a contextual variable. Therefore plotting into multiple facets allows us to compare whether the relationships within the experiment (Input by Type) vary by the location of the experiment.</p>
 </blockquote></li>
 </ol>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-15-1.png" width="480" /></p>
+<p><img src="PresentingResults_files/figure-html/unnamed-chunk-15-1.png" width="480" /></p>
 <ol start="7" style="list-style-type: decimal">
 <li><blockquote>
 <p>In practice, the observations on the graph come with uncertainty in their position. Part of the function of statistical analysis is to estimate the uncertainty so that (a) it can also be represented on the graph (b) we can separate pattern that is noise (possibly just due to random, unrepeatable variation) from that which is signal (repeatable, consistent across repetitions).</p>
 </blockquote></li>
 </ol>
-<pre><code>## Warning: Computation failed in `stat_summary()`:
-## Hmisc package required for this function</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-16-1.png" width="480" /></p>
+<p><img src="PresentingResults_files/figure-html/unnamed-chunk-16-1.png" width="480" /></p>
 <ol start="8" style="list-style-type: decimal">
 <li><blockquote>
 <p>If the effect of one or more factors is considered noise then we can average over them and display main effects. In all of the presentations so far we have averaged over at least one of the factors to illustrate a point. But when putting the final story together we need to consider which factors are important. We should also be looking to our formal statistical analysis for guidance here, by considering which factors we have sufficient evidence to conclude are components of significant interactions. If the variables themselves are significant, but interactions are not, then averaging over these variables will be OK in terms of representing the key effects.</p>
@@ -373,7 +370,7 @@ We could consider combing two factors together, if they are seen as being of equ
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <p>In this case our analysis suggests Gender is not a statistically significant factor, but Inputs, Type, Site and all of the interactions between these variables are statistically significant. Therefore we should reflect that in our final plot - not showing the interactions between the three factors will be misleading, but averaging over gender will not cause any issues.</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-18-1.png" width="480" /></p>
+<p><img src="PresentingResults_files/figure-html/unnamed-chunk-18-1.png" width="480" /></p>
 </div>
 <div id="shiny" class="section level2">
 <h2><span class="header-section-number">4.7</span> Shiny</h2>
@@ -416,11 +413,11 @@ We could consider combing two factors together, if they are seen as being of equ
 <ol style="list-style-type: lower-alpha">
 <li><blockquote>
 <p>One core rule of all graphics, we want to make the way the plot is read intuitive and make sure the audience needs to refer to the axes as little as possible to understand what is being displayed. So we break the rule of response on the vertical axis with something like this:
-<img src="bookdown-demo_files/figure-html/unnamed-chunk-20-1.png" width="480" /></p>
+<img src="PresentingResults_files/figure-html/unnamed-chunk-20-1.png" width="480" /></p>
 </blockquote></li>
 <li><blockquote>
 <p>If the horizontal axis is quantitative then the order is natural. If it is qualitative try to find an ordering that adds some value eg – order by level of another variable, by some property of the category. Definitely do not just keep the data order, which is likely to be nothing more than purely alphabetical. In the example data we saw earlier re-ordering the sites to go from lowest to highest average yields will provide a much easier and clearer interpretation than the arbitrary alphabetical order.
-<img src="bookdown-demo_files/figure-html/unnamed-chunk-21-1.png" width="480" /></p>
+<img src="PresentingResults_files/figure-html/unnamed-chunk-21-1.png" width="480" /></p>
 </blockquote></li>
 </ol>
 </div>
@@ -447,7 +444,7 @@ We could consider combing two factors together, if they are seen as being of equ
 <p>Remember you can vary colour, symbol, line style. So if we do choose to plot three factors, with two factors combining to form the lines, a better option would be to have the two factors represented through different aesthetic elements.</p>
 </blockquote></li>
 </ol>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-22-1.png" width="480" /></p>
+<p><img src="PresentingResults_files/figure-html/unnamed-chunk-22-1.png" width="480" /></p>
 </div>
 <div id="step-7-facets" class="section level3">
 <h3><span class="header-section-number">4.8.7</span> Step 7: Facets</h3>
@@ -456,7 +453,7 @@ We could consider combing two factors together, if they are seen as being of equ
 <p>Facets to can make it easier to display even up to four variables simultaneously if we also use a gridded facet layout - e.g. main interaction of interest showing Type by Inputs; but with row facets corresponding to gender and column facets corresponding to location.</p>
 </blockquote></li>
 </ol>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p><img src="PresentingResults_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
 </div>
 <div id="step-9-next-steps" class="section level3">
 <h3><span class="header-section-number">4.8.8</span> Step 9: Next steps</h3>
