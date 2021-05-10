@@ -3,7 +3,7 @@
 \PassOptionsToPackage{hyphens}{url}
 %
 \documentclass[
-]{book}
+  titlepage]{book}
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{ifxetex,ifluatex}
@@ -36,7 +36,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Resources on Presenting Results},
+  pdftitle={Presenting Research Results},
   pdfauthor={RMS},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
@@ -70,21 +70,29 @@
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
 \usepackage{amsthm}
+\usepackage{pdfpages}
 \makeatletter
 \def\thm@space@setup{%
   \thm@preskip=8pt plus 2pt minus 4pt
   \thm@postskip=\thm@preskip
 }
 \makeatother
+
+\usepackage{titling}
+\usepackage{pdfpages}
+\pretitle{\begin{center}\includepdf{img/pdfcover.pdf}}
+\posttitle{\end{center}}
+\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
 \ifluatex
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
-\title{Resources on Presenting Results}
+\title{Presenting Research Results}
 \author{RMS}
-\date{2021-04-27}
+\date{2021-05-10}
 
 \begin{document}
 \maketitle
@@ -93,10 +101,15 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{introduction}{%
-\chapter{Introduction}\label{introduction}}
+\hypertarget{presenting-research-results}{%
+\chapter{Presenting Research Results}\label{presenting-research-results}}
 
-This page is an introduction. I will write some text later
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+The process of research is a time consuming one, taking hours, days, months and indeed years of careful consideration and study into understanding your objectives better. However perhaps the most important stage of the whole process is the final one - sharing your results with the rest of the world. Without doing this process well, the key things that you have learned along the way will be trapped solely inside your own brain, and may never be translated into real-world impacts.
+
+This guide provides a series of chapters, originally created for a workshop of students funded by the McKnight Collaborative Crop Research Programme (CCRP), providing some guidance, suggestions, ideas and examples of how research results can be presented to maximise their potential impact. This covers chapters concerning how to adapt to visually present quantitative results, tailor towards different audience types, adapt to different modes of presentation and for key components of different research designs and data types. The primary focus of these resources is on results from agricultural research, given the nature of the students involved in the original workshop, but we think these guides will serve as a useful resource regardless of your own scientific discipline.
 
 \hypertarget{contents}{%
 \section{Contents}\label{contents}}
@@ -111,7 +124,7 @@ Overview of general issues to consider for visual presentation of results
 How to deal with multiple factors, and interactions
 
 \protect\hyperlink{precision}{Presenting results as tables and graphs 3 Precision}
-Capturin precision and variability in presentations to complement the key trends
+Capturing precision and variability in presentations to complement the key trends
 
 \protect\hyperlink{papers}{Presenting in papers}
 Guidance for reporting for journals and papers
@@ -147,7 +160,7 @@ Effective presentation of research results starts with identification of the sto
 \hypertarget{video}{%
 \section{Video}\label{video}}
 
-\label{fig:unnamed-chunk-2}\url{https://www.youtube.com/V-o9QbJQzTQ}
+\label{fig:unnamed-chunk-3}\url{https://www.youtube.com/PyKPpgPuA9E}
 
 \hypertarget{scientific-results-and-story-telling}{%
 \section{Scientific results and story telling}\label{scientific-results-and-story-telling}}
@@ -218,8 +231,8 @@ The scientific progress made with your results could be the message in your stor
 \begin{longtable}[]{@{}ll@{}}
 \toprule
 \endhead
-\includegraphics{img/Green dot.png} & We understand observations and they match expectations. All credible data match theory. \\
-\includegraphics{img/Red dot.png} & We observe something that is unexplained and unexpected. At least some credible data doesn't match the dominant theory. \\
+\includegraphics{img/Green dot.png} & We understand observations and they, match expectations. All credible data, match theory. \\
+\includegraphics{img/Red dot.png} & We observe something that is, unexplained and unexpected. At least, some credible data doesn't match the, dominant theory. \\
 \bottomrule
 \end{longtable}
 
@@ -232,7 +245,7 @@ Case & Before & Now & Message \\
 \endhead
 1 & \includegraphics{img/Green dot.png} & \includegraphics{img/Green dot.png} & We thought we understood and that is confirmed \\
 2 & \includegraphics{img/Red dot.png} & \includegraphics{img/Red dot.png} & We did not understand and still don't \\
-3 & \includegraphics{img/Green dot.png} & \includegraphics{img/Red dot.png} & We thought we understood but have seen something new which upsets current theory \\
+3 & \includegraphics{img/Green dot.png} & \includegraphics{img/Red dot.png} & We thought we understood but, have seen something new which, upsets current theory \\
 4 & \includegraphics{img/Red dot.png} & \includegraphics{img/Green dot.png} & We did not understand but now do. \\
 \bottomrule
 \end{longtable}
@@ -286,13 +299,12 @@ This is a small selection of the resources available on the internet on the subj
 \hypertarget{tablegraph1}{%
 \chapter{Presenting results as tables and graphs 1}\label{tablegraph1}}
 
-\hypertarget{draft}{%
-\section{DRAFT}\label{draft}}
+\emph{Alex Thomson}
 
-\hypertarget{video-under-construction}{%
-\section{Video Under Construction}\label{video-under-construction}}
+\hypertarget{video-1}{%
+\section{Video}\label{video-1}}
 
-\label{fig:unnamed-chunk-3}\url{https://www.youtube.com/kplqTqLdR6o}
+\label{fig:unnamed-chunk-4}\url{https://www.youtube.com/_HmrpqnbGfM}
 
 \hypertarget{the-importance-of-visualising-data}{%
 \section{The importance of visualising data}\label{the-importance-of-visualising-data}}
@@ -304,8 +316,6 @@ Building skills in data visualisation can help you to understand and see importa
 The aim of this chapter is to provide some principles behind making good data visualisations.
 
 This guide is intended for anyone who wishes to develop their data visualisation and reporting skills. The advice presented here will be applicable to a wide variety of situations and is not specific to certain topics. Additionally, we hope that users of all ability levels will be able to take this advice to mind in their future projects and their everyday interactions with data.
-
-{[}add some more points here - bullet pointed??{]}
 
 \hypertarget{principles-of-data-visualisation}{%
 \section{Principles of data visualisation}\label{principles-of-data-visualisation}}
@@ -384,9 +394,11 @@ The example below makes an easy mistake in which by trying to provide too much i
 \caption{Far too many variables}
 \end{figure}
 
-\includegraphics[width=13.28in]{img/not too much man}
-
-Much better
+\begin{figure}
+\centering
+\includegraphics{img/not too much man.png}
+\caption{Much Better}
+\end{figure}
 
 \hypertarget{accessibility}{%
 \subsection{Accessibility}\label{accessibility}}
@@ -428,6 +440,8 @@ The example below unnecessary changes the order of the y axis and changes the me
 \textbf{\emph{General}}
 
 \href{}{Our extensive guide which also covers maps}
+
+\href{https://r-charts.com/}{Rcharts - a comprehensive site showing how to make various plots in R}
 
 \href{https://gss.civilservice.gov.uk/policy-store/introduction-to-data-visualisation/\#section-7}{GSS -- Introduction to Data visualisation}
 
@@ -474,8 +488,7 @@ The example below unnecessary changes the order of the y axis and changes the me
 \hypertarget{factor}{%
 \chapter{Presenting results across multiple factors}\label{factor}}
 
-\hypertarget{draft-1}{%
-\section{DRAFT}\label{draft-1}}
+\emph{Sam Dumble}
 
 \hypertarget{introduction-1}{%
 \section{Introduction}\label{introduction-1}}
@@ -486,10 +499,10 @@ Whenever visualising results across multiple factors we should be thinking of wa
 
 In some cases, particularly considering a classic factorial experiment, the design of the trial itself provides a framework for how we should be visualising the results. In others there may be multiple options, some of which we can determine to be more effective than others,
 
-\hypertarget{video-1}{%
-\section{Video}\label{video-1}}
+\hypertarget{video-2}{%
+\section{Video}\label{video-2}}
 
-\label{fig:unnamed-chunk-6}\url{https://www.youtube.com/0k-xc6YOtWc}
+\label{fig:unnamed-chunk-6}\url{https://www.youtube.com/_jJa6fx57zc}
 
 \hypertarget{overall-principles}{%
 \section{Overall principles}\label{overall-principles}}
@@ -652,8 +665,8 @@ In this case our analysis suggests Gender is not a statistically significant fac
 
 \includegraphics{PresentingResults_files/figure-latex/unnamed-chunk-19-1.pdf}
 
-\hypertarget{shiny}{%
-\section{Shiny}\label{shiny}}
+\hypertarget{interactive-demo}{%
+\section{Interactive Demo}\label{interactive-demo}}
 
 \label{fig:unnamed-chunk-20}\url{https://shiny.stats4sd.org/factorial-experiments-2}
 
@@ -791,21 +804,17 @@ In this case our analysis suggests Gender is not a statistically significant fac
 \hypertarget{precision}{%
 \chapter{Precision and variability}\label{precision}}
 
-\begin{verbatim}
-## Warning in ifelse(fs$adults != "6+", as.numeric(as.character(fs$adults)), : NAs
-## introduced by coercion
-\end{verbatim}
-
-\hypertarget{section-under-construction}{%
-\section{SECTION UNDER CONSTRUCTION}\label{section-under-construction}}
+\emph{Sam Dumble}
 
 \hypertarget{introduction-2}{%
 \section{Introduction}\label{introduction-2}}
 
-When presenting results it can be tempting to focus solely on the main patterns and trends we can identify through our analysis. But we always have to bear in mind the levels of uncertainty we have in those trends, and the underlying variability that will exist around those trends. So it is important to consider how we could incorporate these ideas of precision and variability into the way we present our results to assist our audience by providing as much relevant context to the results as we can.
+When presenting results it can be tempting to focus solely on the main patterns and trends we can identify through our analysis. But we always have to bear in mind both the levels of uncertainty we have in those trends, and the underlying variability that will exist away from those trends. Incorporating these ideas of precision and variability into the way we present our results, helps to prevent our results being taken out of context or over-interpreted.
 
-\hypertarget{video-2}{%
-\section{Video}\label{video-2}}
+\hypertarget{video-3}{%
+\section{Video}\label{video-3}}
+
+\label{fig:unnamed-chunk-26}\url{https://www.youtube.com/l-KPt6b20SQ}
 
 \hypertarget{precision-vs-variability}{%
 \section{Precision vs Variability}\label{precision-vs-variability}}
@@ -828,13 +837,18 @@ The standard error can be considered as ``the standard deviation \emph{of the es
 
 This is why using confidence intervals are general preferred - these provide the range of values where we think the ``true'' value of the estimate would lie. In general it is conventional to present results using a 95\% confidence interval, this has the nice statistical property of usually being equal the mean +- two times the standard error. As we increase the level of confidence of our interval, to 99\% or 99.9\%, then width of the confidence interval will increase - to be more confident that we have captured the true value in our interval we need to allow for more possible options.
 
+\hypertarget{interactive-demo-of-precision-vs.-variability}{%
+\subsection{Interactive Demo of Precision vs.~Variability}\label{interactive-demo-of-precision-vs.-variability}}
+
+\label{fig:unnamed-chunk-27}\url{https://shiny.stats4sd.org/PresentingResults-Precison/}
+
 \hypertarget{in-tables}{%
 \subsection{In tables}\label{in-tables}}
 
 \hypertarget{around-trends}{%
 \subsection{Around trends}\label{around-trends}}
 
-When showing the confidence interval of a trend, visually this is better represented by showing a shaded region around the trend line, rather than through use of multiple error bars, which would be misleading or messy, or through use of seperate lines, which are harder to interpret and less visually intuitive.
+When showing the confidence interval of a trend, visually this is better represented by showing a shaded region around the trend line, rather than through use of multiple error bars, which would be misleading or messy, or through use of separate lines, which are harder to interpret and less visually intuitive.
 
 \hypertarget{overload-of-error-bars}{%
 \subsection{Overload of error bars?}\label{overload-of-error-bars}}
@@ -847,22 +861,69 @@ When presenting plots with lots of error bars this can quickly start to look mes
 \hypertarget{plots-which-can-display-variability}{%
 \subsection{Plots which can display variability}\label{plots-which-can-display-variability}}
 
-There are lots of different plots available which can show variability and compare variability across groups. Error bars should never be used as a way of showing variability. Not only do they not provide a strong visual summary of variability the conventional use of error bars is to represent precision, so it is extremely likely your plot will be mis-interpreted by some or all of your audience.
+There are lots of different plots available which can show variability and compare variability across groups. Error bars should never be used as a way of showing variability. Not only do they not provide a strong visual summary of variability the conventional use of error bars is to represent precision, so it is extremely likely your plot will be misinterpreted by some or all of your audience. (ref: \url{https://journals.lww.com/jpancreatology/Fulltext/2019/09000/A_note_on_error_bars_as_a_graphical_representation.2.aspx})
 
-\hypertarget{boxplotsviolin-plots}{%
-\subsubsection{Boxplots/Violin Plots}\label{boxplotsviolin-plots}}
+Many of the commonly chosen plot types, such as bar charts or line graphs, do not allow for the assessment of variability. This is a problem when the audience wants to understand more about the data itself, and how strong these trends are in relation to the overall variability. Ref: (\url{https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128})
+
+\includegraphics{PresentingResults_files/figure-latex/unnamed-chunk-28-1.pdf}
+
+Different options could include
+
+\hypertarget{boxplots}{%
+\subsubsection{Boxplots}\label{boxplots}}
+
+\includegraphics{PresentingResults_files/figure-latex/unnamed-chunk-29-1.pdf}
+
+Boxplots provide a very structured view of variability, by illustrating the interquartile range, the minimum and maximum value as well as any outliers. This structured nature makes them easy to make comparisons across groups -in the example above we can see clearly the variability in wealth, as represented by th size of the boxes, is very similar for all education levels. Boxplots also can clearly show trends - again we can clearly see the median wealth, the middle of the box, increasing as education increases. This ease of interpretation makes them a very popular choice for displaying data.
 
 \hypertarget{histograms}{%
 \subsubsection{Histograms}\label{histograms}}
 
+\includegraphics{PresentingResults_files/figure-latex/unnamed-chunk-30-1.pdf}
+
+Histograms show us the shape of the distribution, by grouping together similar values into bars. One aspect of this distribution is the variability, although we cannot infer comparisons of variability from histograms quite as easily as we can with boxplots. However histograms are especially useful if we have non-unimodal distributions. We can see this for the ``complete primary'' group in the plot above, which seems to have two distinct peaks of the wealth score. Because of the structured way boxplots summarise variability, this is notsomething we could detect from a boxplot. A note of caution - the bin size of histograms is an abritrary and subjective decision. Changing how wide each bar is can often change the shape of the distribution substantially.
+
+\hypertarget{density-plots-violin-plots}{%
+\subsection{Density plots/ Violin Plots}\label{density-plots-violin-plots}}
+
+\includegraphics{PresentingResults_files/figure-latex/unnamed-chunk-31-1.pdf}
+
+Density plots are very similar to histograms, except instead of grouping the data into bars a smoothing algorithm is used to show the approximate distribution as a continuous function. These have many of the same pros and cons as histograms, but unlike histograms they are not reliant on setting bin size but they are very volatile to changes when sample sizes are small.
+
+\includegraphics{PresentingResults_files/figure-latex/unnamed-chunk-32-1.pdf}
+
+Violin plots take the density plots, rotate them 90 degrees and then mirror them. These are designed to make density plots easier to compare across multiple groups.
+
 \hypertarget{cumulative-frequency-plots}{%
 \subsubsection{Cumulative Frequency Plots}\label{cumulative-frequency-plots}}
+
+\includegraphics{PresentingResults_files/figure-latex/unnamed-chunk-33-1.pdf}
+
+Cumulative frequency plots are a good way of comparing results across groups for the full range of values, they can show whether differences in groups are consistent across the range of values or whether differences between groups are being driven solely by differences at the extremes, or middle. Summary statistics like the median and interquartile range can also be directly inferred from these type of plots.
 
 \hypertarget{scatter-plots}{%
 \subsubsection{Scatter plots}\label{scatter-plots}}
 
+\includegraphics{PresentingResults_files/figure-latex/unnamed-chunk-34-1.pdf}
+Scatter plots are often the best way of showing variability when the data is fairly small in size, with a small number of points scatter plots make it easy to infer patterns, trends and variability. But this quickly gets more difficult as the size of the dataset increases. For example in the plot above, even with a jittered scatterplot, it is very difficult to see any differences in wealth by education because there is so much data.
+
+In some cases scatter plots can be very useful for showing aspects of variability which can easily be missed by conventional statistical summaries - for example in the classic `anscombe' quartet, where all four of these plots have the same linear relationship and the same variance. But the nature of their relationship, and how the variability is structured across the range are very different.
+
+\includegraphics{PresentingResults_files/figure-latex/unnamed-chunk-35-1.pdf}
+
 \hypertarget{in-tables.-is-standard-deviation-always-the-answer}{%
 \subsection{In tables. Is standard deviation always the answer?}\label{in-tables.-is-standard-deviation-always-the-answer}}
+
+In journal articles it would be expected to use the standard deviation to summarise variability.
+However, as illustrated in the plots above, this value does not tell the whole picture about variability - in isolation it is only really useful if our data perfectly follows a known statistical distribution, and this is rarely the case. Plots are a much better way of illustrating variability in data!
+
+But where presenting summary statistics, particularly to non technical audiences, standard deviations are often even less useful as they are not commonly well understood in their own right. On the other hand percentiles can be quite well understood by many people - so consider using the lower and upper quartiles as a way of summarising variability, although framed as the ``25th percentile'' and ``75th percentile'', so they may be better understood. Equally it can be useful to talk about the ``5th'' and ``95th'' percentiles as well. The minimum and maximum values, although almost universally understood, are actually quite poor summaries of overall variability. These values are solely dependent on one individually high and one individually low value, and unless you have taken a census of all possible values, then they do not provide much information about variability. If you were to re-do the data collection procedure again you would likely obtain very different results. Hence why considering the 5th or 95th percentiles may provide a better, more generalisable summary of your results
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\url{https://www.nature.com/articles/nmeth.2659}
+\url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2064100/}
 
 \hypertarget{papers}{%
 \chapter{Presenting in papers}\label{papers}}
@@ -931,7 +992,7 @@ If you think of a typical paper you probably think of the standard structure wit
 \hypertarget{the-writing-process---video}{%
 \section{The writing process - Video}\label{the-writing-process---video}}
 
-\label{fig:unnamed-chunk-27}\url{https://www.youtube.com/V-o9QbJQzTQ}
+\label{fig:unnamed-chunk-36}\url{https://www.youtube.com/sUqJ9MQXN04}
 
 The video accompanying this chapter mainly focuses on the process of writing a paper as that is less commonly described in other resources. Everyone will develop their own approach to writing but when you are faced with the task for the first time it can be daunting.
 
@@ -1077,10 +1138,10 @@ Exemplary description of an observational study: \href{https://www.bmj.com/conte
 
 \emph{Alex Thomson}
 
-\hypertarget{video-3}{%
-\section{Video}\label{video-3}}
+\hypertarget{video-4}{%
+\section{Video}\label{video-4}}
 
-\label{fig:unnamed-chunk-28}\url{https://www.youtube.com/v6H2jlgGoGM}
+\label{fig:unnamed-chunk-37}\url{https://youtu.be/zc_GnRclgYQ}
 
 \hypertarget{the-aim-of-posters}{%
 \section{The aim of posters}\label{the-aim-of-posters}}
@@ -1315,7 +1376,7 @@ Assumes generally you have lots and lots of interesting numbers, results and fac
 
 Can be off-putting to supply the audience with so much information at once.
 
-\begin{center}\includegraphics[width=0.5\linewidth,height=0.25\textheight]{img/infographic} \end{center}
+\begin{center}\includegraphics[width=0.75\linewidth,height=0.5\textheight]{img/infographic} \end{center}
 
 \href{https://visual.ly/community/Infographics/technology/infographics-benefits-their-use-online?utm_source=visually_embed}{Source of infographic: Visual.ly}
 
@@ -1646,7 +1707,7 @@ A large interesting diagram draws the eye
 
 Shows that research and studies is not the only reason to make a poster as this is designed to illustrate key principles, examples and practices.
 
-\begin{center}\includegraphics[width=9.56in]{img/GIS East Africa Poster} \end{center}
+\begin{center}\includegraphics[width=0.75\linewidth,height=0.5\textheight]{img/GIS East Africa Poster} \end{center}
 
 Example 3: CCRP Poster - GIS East Africa Authors: Were K, Macharia PN, Nyamai M, Tanui LK, Okech P, Ngigi MM, Ngigi TG, Onchaga R, Matara S, Odhiambo S and Lali F
 
@@ -1732,10 +1793,12 @@ Makes use of the traditional design also with good use of imagery and space, ver
 \hypertarget{audience1}{%
 \chapter{Adapting to the audience}\label{audience1}}
 
-\hypertarget{video-4}{%
-\section{Video}\label{video-4}}
+\emph{Nicolas Greliche}
 
-\label{fig:unnamed-chunk-32}\url{https://www.youtube.com/wO5NCcUoDi4}
+\hypertarget{video-5}{%
+\section{Video}\label{video-5}}
+
+\label{fig:unnamed-chunk-41}\url{https://youtu.be/7a7x67XAu_I}
 
 \hypertarget{without-a-conscious-effort-a-presentation-is-unlikely-to-be-well-adapted-to-its-audience}{%
 \section{Without a conscious effort, a presentation is unlikely to be well adapted to its audience}\label{without-a-conscious-effort-a-presentation-is-unlikely-to-be-well-adapted-to-its-audience}}
@@ -1864,97 +1927,52 @@ There are also arguments for doing things differently than suggested here. Let's
 
 Planning well and thinking about all of points and suggestions we've discussed is time consuming. Yes. That's true. It is definitely time consuming. So there is a Balance to find. But keep in mind that if the audience doesn't understand your presentation, your presentation becomes pointless!
 
-\hypertarget{the-ppt-presentation-as-standalone-material}{%
-\subsubsection{The ppt presentation as standalone material}\label{the-ppt-presentation-as-standalone-material}}
+\hypertarget{the-ppt-presentation-should-sometime-work-as-standalone-material}{%
+\subsubsection{The ppt presentation should sometime work as standalone material}\label{the-ppt-presentation-should-sometime-work-as-standalone-material}}
 
-\begin{itemize}
-\tightlist
-\item
-  There is an argument for having lots of text and information in the slides rather than keeping these to a minimum to not distract the audience from what you're saying. This argument is that sometimes, PowerPoint presentations are also intended to become standalone material. In such situation, one might think that all the information that would be given by the presenter should be in the slides. Well maybe, but there are good alternatives to that. First, as said earlier, you can actually place your full script in the note section, which is part of your PowerPoint file, so if you share your slides, you also share your script. You can also maybe make a separate version of the slides that is specifically for sharing. And finally what about sharing a recording of the presentation?
-\end{itemize}
+There is an argument for having lots of text and information in the slides rather than keeping these to a minimum to not distract the audience from what you're saying. This argument is that sometimes, PowerPoint presentations are also intended to become standalone material. In such situation, one might think that all the information that would be given by the presenter should be in the slides. Well maybe, but there are good alternatives to that. First, as said earlier, you can actually place your full script in the note section, which is part of your PowerPoint file, so if you share your slides, you also share your script. You can also maybe make a separate version of the slides that is specifically for sharing. And finally what about sharing a recording of the presentation?
 
-\hypertarget{special-case-of-a-presentation-of-results-shown-to-farmers}{%
-\section{Special case of a presentation of results shown to farmers}\label{special-case-of-a-presentation-of-results-shown-to-farmers}}
+\hypertarget{special-case-of-a-presentation-of-results-shown-to-farmers---video}{%
+\section{Special case of a presentation of results shown to farmers - Video}\label{special-case-of-a-presentation-of-results-shown-to-farmers---video}}
 
-\label{fig:unnamed-chunk-33}\url{https://www.youtube.com/4n8kITEY8wQ}
+\label{fig:unnamed-chunk-42}\url{https://youtu.be/slM6ZjeukE4}
 
-\begin{itemize}
-\tightlist
-\item
-  Put little text, avoid tables. Choose wording, colours and icons/images very carefully. Icons can be great, but if not chosen carefully they can quickly do more harm than good
-\item
-  You may want to keep things extra simple, but more important is making sure that what is shown is intuitive -- and careful! Not easy to guess what will be intuitive to farmers -- expl: though simple, barcharts might not be so intuitive
-\item
-  Provide lots of guidance (obviously), but be very receptive to farmers reactions and adapt to it -- spend more time on the things they are interested in, and on the key points where you feel they struggle. Skip the things where you feel they struggle too much though.
-\item
-  Try hard that farmers feel related to what is presented:
-  o would help if they took part in experiment or similar experiment
-  o try to present things in a way that is familiar to them -- explain how results have been obtained in a way that follows the usual process in a farm for example.
-  o Might be easiest to understand a graph if they can find themselves in the graph - each farmer is represented by a point or a line -- and emphasize this by giving examples
-  o focus on the results that are useful for them
-  o keep in mind that sometimes it might be better letting a farmer present the results -- in which case you might need to go beyond presenting and provide training to a farmer on presenting the results.
-\end{itemize}
+All of the above is very relevant to the special case of presenting results to farmers, but the difference between farmers and you in terms of background, knowledge and way of reasoning is so important that we need to come back to the main points and develop them further. Because adapting to a farmer audience is not easy.
 
-\hypertarget{other-resources-2}{%
-\section{Other Resources}\label{other-resources-2}}
+\hypertarget{difference-of-backgroundknowledge}{%
+\subsection{Difference of background/knowledge}\label{difference-of-backgroundknowledge}}
 
-\textbf{\emph{General}}
+Usually, farmers don't have any familiarity with research or statistics and they may put more trust and value into stories or anecdotes than on the abstract generalisation that researchers hope to discover. When presenting results to farmers, it is therefore important to keep this in mind and to try hard to make results very relatable. Here are some tips to help you with that:
+- Try to present things in a way that is familiar to them: explain how results have been obtained in a way that follows the usual process in a farm for example. Use examples or anecdote to help them relate to what you are talking about.\\
+- It might be easiest to understand a graph if they can find themselves on the graph, where each farmer is represented by a point or a line. Emphasize it by giving examples.\\
+- Try to focus on the results that are useful for them.\\
+- Keep in mind that sometimes it might be more fruitful to let a farmer present the results. In that case, you might need to go beyond presenting and provide training on presenting the results to some of the farmers.
 
-\href{}{Our extensive guide which also covers maps}
+\hypertarget{a-different-way-of-reasoning}{%
+\subsection{A different way of reasoning}\label{a-different-way-of-reasoning}}
 
-\href{https://gss.civilservice.gov.uk/policy-store/introduction-to-data-visualisation/\#section-7}{GSS -- Introduction to Data visualisation}
+What is very difficult when presenting results to a farmer audience is that it is hard to know how they will look at a slide, a picture or a graph, as well as what you should say or show to convey your message and make sure they understand why it is relevant to them. The literature remains relatively thin on the subject, and specific tips are hard to provide, but putting some extra attention to the following should help:
+- Put little text and avoid tables. Not all farmers know how to read, so you should really focus on visual representations.\\
+- Choose colours, icons, pictures very carefully. Icons can help, but if not chosen carefully they can actually do more harm than good.\\
+- You may want to keep things extra simple, but more important is making sure that what is shown is intuitive. Because Farmers can understand complex graphs when it is made intuitive to them. But it is not easy to guess what will be intuitive to farmers. For example, a barchart is one of the simplest type of graphs, but it is may be much less intuitive than complex graphs where the farmers can identify themselves.\\
+- Provide lots of guidance. That's obvious. But it is as important to be very receptive to farmers reactions and adapt to it. Spend more time on the things they are interested in, and on the key points where you feel they struggle. Skip the things where you feel they struggle too much though.
 
-\href{https://stats4sd.org/resources/412}{Informative Presentation of Tables, Graphs and Statistics}
+\hypertarget{have-an-open-mind}{%
+\subsection{Have an open mind}\label{have-an-open-mind}}
 
-\href{https://stats4sd.org/resources/59}{Data visualisation examples}
-
-\href{https://www.editage.com/insights/tips-on-effective-use-of-tables-and-figures-in-research-papers}{Tips on effective use of tables and figures in research papers}
-
-\href{https://sites.google.com/site/tufteondesign/home/six-fundamental-principles-of-design}{Tufte Principles}
-
-\href{https://blog.hubspot.com/marketing/great-data-visualization-examples}{Blog with accompanying free guide}
-
-\textbf{\emph{Tables}}
-
-\href{https://stats4sd.org/resources/506}{Exporting Tables from R using Flextable, Kable and gt}
-
-\href{https://www.manuscriptedit.com/scholar-hangout/preparing-tables-research-papers/}{Preparing tables for research papers}
-
-\href{http://www.docs.is.ed.ac.uk/skills/documents/3575/3575.pdf}{Formatting Tables in MS word}
-
-\textbf{\emph{Graphs}}
-
-\href{https://r-graphics.org/}{R Graphics Cookbook}
-
-\href{https://github.com/ft-interactive/chart-doctor/blob/master/visual-vocabulary/Visual-vocabulary.pdf}{Financial Times -- Visual Vocabulary}
-
-\textbf{\emph{Accessibility}}
-
-\href{https://style.ons.gov.uk/writing-for-the-web/web-accessibility/introduction-3/}{ONS -- Web accessibility}
-
-\href{https://www.tableau.com/about/blog/2016/4/examining-data-viz-rules-dont-use-red-green-together-53463}{Tableau -- Colour Blindness}
-
-\textbf{\emph{Good Examples}}
-
-\href{https://www.reddit.com/r/dataisbeautiful/}{Reddit - r/dataisbeautiful}
-
-\textbf{\emph{Bad Examples}}
-
-\href{https://www.reddit.com/r/dataisugly/}{Reddit - r/dataisugly}
-
-\href{https://towardsdatascience.com/why-is-this-chart-bad-5f16da298afa}{towardsdatascience.com article}
+And there's one last think that is really important when presenting results to farmers. It is to keep an open mind and be ready to learn things from the farmers as much as they learn from you. Because their perspective on things is unique and if you accept to genuinely accept and listen to it, you will quickly realise how valuable and insightful it is!
 
 \hypertarget{show}{%
 \chapter{Presenting as show and tell}\label{show}}
 
-\hypertarget{section-under-construction-1}{%
-\section{SECTION UNDER CONSTRUCTION}\label{section-under-construction-1}}
+\hypertarget{coming-soon}{%
+\section{Coming soon\ldots{}}\label{coming-soon}}
 
 \hypertarget{review}{%
 \chapter{Reviewing, critiquing and improving presentation}\label{review}}
 
-\hypertarget{section-under-construction-2}{%
-\section{SECTION UNDER CONSTRUCTION}\label{section-under-construction-2}}
+\hypertarget{coming-soon-1}{%
+\section{Coming soon\ldots{}}\label{coming-soon-1}}
 
   \bibliography{book.bib,packages.bib}
 
